@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://drwqx008cauhr"]
+
+[ext_resource type="Script" uid="uid://dkokqv8xctgig" path="res://enemy.gd" id="1_n0g06"]
+[ext_resource type="Shader" uid="uid://bylf238u7ayak" path="res://addons/eye_dropper/eye_dropper.gdshader" id="1_pwjut"]
+[ext_resource type="Texture2D" uid="uid://cw01gh8m5qvrv" path="res://Ship_Spiker_Idle1.png" id="2_dxifv"]
+[ext_resource type="Texture2D" uid="uid://bu651477mbghc" path="res://PALETTE_ShipSpiker_enemy.png" id="2_pwjut"]
+[ext_resource type="Texture2D" uid="uid://b1fg0ao4yfvha" path="res://PALETTE_Ship_Spiker_default.png" id="3_n0g06"]
+[ext_resource type="Texture2D" uid="uid://b17wy52odhfej" path="res://Ship_Spiker_Idle2.png" id="3_pwjut"]
+[ext_resource type="Texture2D" uid="uid://302eguwumpx" path="res://Ship_Spiker_Idle3.png" id="4_n0g06"]
+[ext_resource type="Texture2D" uid="uid://cmxbjdfjqphex" path="res://Ship_Spiker_Idle4.png" id="5_ar8e5"]
+[ext_resource type="Texture2D" uid="uid://dirngyd8khkvt" path="res://ShipSpiker_ForwardThrust1.png" id="6_doop2"]
+[ext_resource type="Texture2D" uid="uid://beuk3tgk71qy4" path="res://ShipSpiker_ForwardThrust2.png" id="7_5hcft"]
+[ext_resource type="Texture2D" uid="uid://c5uegrfnmt2dm" path="res://ShipSpiker_ForwardThrust3.png" id="8_nnovl"]
+[ext_resource type="Texture2D" uid="uid://dt1ouu5eg73tk" path="res://ShipSpiker_ForwardThrust4.png" id="9_jmwgi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n0g06"]
+shader = ExtResource("1_pwjut")
+shader_parameter/palette_array_size = 0
+shader_parameter/input_palette_texture = ExtResource("3_n0g06")
+shader_parameter/output_palette_texture = ExtResource("2_pwjut")
+shader_parameter/input_palette_array = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1)
+shader_parameter/output_palette_array = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_otto8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_doop2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5hcft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nnovl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jmwgi")
+}],
+"loop": true,
+"name": &"forward_thrust",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dxifv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pwjut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n0g06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ar8e5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="EnemyShip_Spiker" type="RigidBody2D" unique_id=1767108747 groups=["enemies"]]
+gravity_scale = 0.0
+script = ExtResource("1_n0g06")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1568463318]
+material = SubResource("ShaderMaterial_n0g06")
+position = Vector2(0, 1)
+sprite_frames = SubResource("SpriteFrames_otto8")
+animation = &"idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=120643716]
+polygon = PackedVector2Array(-14, 6, -11, 12, 0, 14, 11, 12, 14, 6, 10, -5, 5, -5, 0, -15, -5, -5, -10, -5)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=501951222]
+rect = Rect2(-6, -4, 12, 14)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
