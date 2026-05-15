@@ -40,7 +40,7 @@ func _process(delta: float) -> void:
 		animation.play("forward_thrust")
 	if(direction == Vector2.ZERO):
 		animation.play("idle")
-
+	
 
 func _on_body_entered(body: Node2D) -> void:
 	hide()

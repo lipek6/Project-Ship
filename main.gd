@@ -23,3 +23,7 @@ func _on_spawn_timer_timeout() -> void:
 	
 	var velocity : Vector2 = Vector2(randf_range(enemy.MIN_SPEED, enemy.MAX_SPEED), 0)
 	enemy.linear_velocity = velocity.rotated(enemy.rotation)
+
+
+func _on_player_player_hitted() -> void:
+	$HUD.show_game_over()
