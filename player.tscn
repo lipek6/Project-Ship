@@ -48,6 +48,7 @@ animations = [{
 }]
 
 [node name="Player" type="Area2D" unique_id=37292739]
+scale = Vector2(3, 3)
 script = ExtResource("1_b26j0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1343314710]
@@ -56,5 +57,11 @@ animation = &"idle"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1428038213]
 polygon = PackedVector2Array(-10, 10, 10, 10, 0, -10)
+
+[node name="LeftGunBarrel" type="Marker2D" parent="." unique_id=1094968851]
+position = Vector2(-8.333334, -6)
+
+[node name="RightGunBarrel" type="Marker2D" parent="." unique_id=1646645415]
+position = Vector2(8.666667, -6)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

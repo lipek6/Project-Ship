@@ -16,6 +16,8 @@ point_count = 5
 script = ExtResource("1_lquwl")
 enemy_scene = ExtResource("2_7mycd")
 
+[node name="HUD" parent="." unique_id=40415969 instance=ExtResource("5_kek77")]
+
 [node name="TileSet" parent="." unique_id=940956023 instance=ExtResource("3_272bh")]
 position = Vector2(17.6642, 4.5290585)
 
@@ -35,7 +37,7 @@ position = Vector2(15, 11)
 wait_time = 0.5
 autostart = true
 
-[node name="HUD" parent="." unique_id=40415969 instance=ExtResource("5_kek77")]
-
+[connection signal="apply_recoil" from="." to="Player" method="_on_main_apply_recoil"]
+[connection signal="player_fired" from="Player" to="." method="_on_player_player_fired"]
 [connection signal="player_hitted" from="Player" to="." method="_on_player_player_hitted"]
 [connection signal="timeout" from="EnemiesPath/SpawnTimer" to="." method="_on_spawn_timer_timeout"]

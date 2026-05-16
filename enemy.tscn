@@ -59,19 +59,24 @@ animations = [{
 }]
 
 [node name="EnemyShip_Spiker" type="RigidBody2D" unique_id=1767108747 groups=["enemies"]]
+scale = Vector2(3, 3)
 gravity_scale = 0.0
 script = ExtResource("1_n0g06")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1568463318]
 material = SubResource("ShaderMaterial_n0g06")
 position = Vector2(0, 1)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_otto8")
 animation = &"idle"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=120643716]
+scale = Vector2(3, 3)
 polygon = PackedVector2Array(-14, 6, -11, 12, 0, 14, 11, 12, 14, 6, 10, -5, 5, -5, 0, -15, -5, -5, -10, -5)
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=501951222]
-rect = Rect2(-6, -4, 12, 14)
+visible = false
+position = Vector2(4, 2)
+rect = Rect2(-46, -49, 84.333336, 87.666664)
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

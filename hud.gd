@@ -5,8 +5,10 @@ extends CanvasLayer
 signal start_game
 
 func _on_start_button_pressed() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	$StartButton.hide()
 	$MessageLabel.hide()
+	$Crosshair.show()
 	emit_signal("start_game")
 
 
@@ -24,4 +26,6 @@ func show_message(text_to_show : String):
 
 func _on_timer_timeout() -> void:
 	$MessageLabel.text = DEFAULT_MESSAGE
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	$StartButton.show()
+	$Crosshair.hide()

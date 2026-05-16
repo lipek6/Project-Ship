@@ -1,6 +1,8 @@
 extends Node
 @export var enemy_scene : PackedScene
 
+signal apply_recoil(recoil_vector : Vector2)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	randomize()
@@ -27,3 +29,10 @@ func _on_spawn_timer_timeout() -> void:
 
 func _on_player_player_hitted() -> void:
 	$HUD.show_game_over()
+
+
+func _on_player_player_fired(firing_position: Vector2, firing_direction: Vector2, bullet_type: PackedScene) -> void:
+	var bullet := bullet_type.instantiate()
+	add_child(bullet)
+	var recoil_vector : Vector2 = bullet.fire(firing_position, firing_direction)
+	emit_signal("apply_recoil", recoil_vector)

@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://thp4ytys2e6n" path="res://text_theme.tres" id="1_37p78"]
 [ext_resource type="Script" uid="uid://cngp0enr5lho0" path="res://hud.gd" id="1_64ctp"]
 [ext_resource type="Texture2D" uid="uid://b4yjhsk5fk16p" path="res://Crosshair_Sheet.png" id="3_8sq4i"]
+[ext_resource type="Script" uid="uid://isafoe3nom10" path="res://crosshair.gd" id="4_640wx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_640wx"]
 atlas = ExtResource("3_8sq4i")
@@ -139,6 +140,7 @@ one_shot = true
 position = Vector2(960, 444)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_4u2vk")
+script = ExtResource("4_640wx")
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
