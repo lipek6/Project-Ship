@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cn3p5hmtgu8ss"
+path="res://.godot/imported/pw_autocannon.aseprite-241d6511537b8a07d195bc1d60adf240.res"
+
+[deps]
+
+source_file="res://weapons/pw_autocannon.aseprite"
+dest_files=["res://.godot/imported/pw_autocannon.aseprite-241d6511537b8a07d195bc1d60adf240.res"]
+
+[params]
+

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://c8alcnqqkddq7"
+path="res://.godot/imported/sh_spiker.aseprite-b03a078012b4b11b241b651e804090e8.res"
+
+[deps]
+
+source_file="res://entities/ships/sh_spiker.aseprite"
+dest_files=["res://.godot/imported/sh_spiker.aseprite-b03a078012b4b11b241b651e804090e8.res"]
+
+[params]
+

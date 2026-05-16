@@ -1,0 +1,80 @@
+{ "frames": [
+   {
+    "filename": "pw_gatling 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 24, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 24, "h": 24 },
+    "sourceSize": { "w": 24, "h": 24 },
+    "duration": 100
+   },
+   {
+    "filename": "pw_gatling 1.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 24, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 24, "h": 24 },
+    "sourceSize": { "w": 24, "h": 24 },
+    "duration": 100
+   },
+   {
+    "filename": "pw_gatling 2.aseprite",
+    "frame": { "x": 24, "y": 0, "w": 24, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 24, "h": 24 },
+    "sourceSize": { "w": 24, "h": 24 },
+    "duration": 100
+   },
+   {
+    "filename": "pw_gatling 3.aseprite",
+    "frame": { "x": 48, "y": 0, "w": 24, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 24, "h": 24 },
+    "sourceSize": { "w": 24, "h": 24 },
+    "duration": 100
+   },
+   {
+    "filename": "pw_gatling 4.aseprite",
+    "frame": { "x": 0, "y": 24, "w": 24, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 24, "h": 24 },
+    "sourceSize": { "w": 24, "h": 24 },
+    "duration": 100
+   },
+   {
+    "filename": "pw_gatling 5.aseprite",
+    "frame": { "x": 24, "y": 24, "w": 24, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 24, "h": 24 },
+    "sourceSize": { "w": 24, "h": 24 },
+    "duration": 100
+   },
+   {
+    "filename": "pw_gatling 6.aseprite",
+    "frame": { "x": 48, "y": 24, "w": 24, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 24, "h": 24 },
+    "sourceSize": { "w": 24, "h": 24 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.3.17.2-x64",
+  "image": "pw_gatling.png",
+  "format": "RGBA8888",
+  "size": { "w": 72, "h": 48 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Idle", "from": 0, "to": 0, "direction": "forward", "color": "#000000ff" },
+   { "name": "Shoot", "from": 1, "to": 6, "direction": "forward", "color": "#000000ff" }
+  ],
+  "slices": [
+  ]
+ }
+}

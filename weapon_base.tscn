@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://duk6s3b78mntl"]
+
+[ext_resource type="Script" uid="uid://b3djmssyf6fcd" path="res://weapon_base.gd" id="1_bx7nf"]
+
+[node name="WeaponBase" type="Node2D" unique_id=1242098188]
+script = ExtResource("1_bx7nf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2145195615]
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=51700326]
+
+[node name="FiringCooldown" type="Timer" parent="." unique_id=117917087]
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=2020491921]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox" unique_id=1906223601]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1222738663]

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://ckni5502t56mk"
+path="res://.godot/imported/pw_gatling.aseprite-5241d4d9c0730330bc484bf50970371d.res"
+
+[deps]
+
+source_file="res://weapons/pw_gatling.aseprite"
+dest_files=["res://.godot/imported/pw_gatling.aseprite-5241d4d9c0730330bc484bf50970371d.res"]
+
+[params]
+

@@ -1,0 +1,217 @@
+[gd_scene format=4 uid="uid://drwqx008cauhr"]
+
+[ext_resource type="Script" uid="uid://dkokqv8xctgig" path="res://entities/enemies/enemy.gd" id="1_n0g06"]
+[ext_resource type="Material" uid="uid://cpqevllbo6uy6" path="res://swap_palette_to_enemy.tres" id="2_wqcwe"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_msovg"]
+_data = PackedByteArray("AAADAAUAAAABAAAAYAAAAEAAAACgAQAAUklGRpgBAABXRUJQVlA4TIsBAAAvX8APED9AEEASwCZLrLDDOvsTDVis6i7wiv+bayQ1AZAw1OACZ1HT2mL+AwBQWp40lIf13QdwtO1t28CNe5q0+sEJUi7Q94rdLdg18f4kSIAIDhDRfwdu2ziStu/dANz2CZDTIYGcwjqYgzsOzCm2g8sU2nGopcgOFlM8R/8yp2O5UFfHMrs6CjvnAvd0LDnPjo5DWxp3dC9TXGg8R/cy5YXGdHAvdnK098XTwUtluzqmq6ujo6OZ/ByHXsnBocHBybFHRABEXDs4rNPT0wbg/ukJmoloB/BJBG7TJ4mhO/jP6ZB0R7SYdUewDsxJd8SqvmS6I0ydVz/pjkjJr0R3+Dd2PB3LheuOoZa5pDtGjqecy4XojqFtzt0LaR1jW3EhusP6717JraU2l3SH8aH3Yv90h7HefWLFMVDz3EqKY6jp6upY0x3WYZ0piZrJmAYzuI3tEREAEdcGt7FfIto+E9GH7rb2TPQhhm5BTkQ7gE8iAPtmC/Dcbut/xdCdvecPMXQLftNWDAWXAAA=")
+size_override = Vector2(96, 64)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_twyc1"]
+_data = PackedByteArray("AAADAAUAAAABAAAAMAAAABgAAABmAAAAUklGRl4AAABXRUJQVlA4TFIAAAAvL8AFEBcgEEhxADMuJEgx1bsKBJJo1lx9/gOqPyiIZIN6z4xeSuhf5k+BiP6rbduGsacUPoJNpQwraiwpB3TC9dWxdKicRzefI9XCIbv65agA")
+size_override = Vector2(48, 24)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_w4yt1"]
+_data = PackedByteArray("AAADAAUAAAABAAAAMAAAABgAAABmAAAAUklGRl4AAABXRUJQVlA4TFIAAAAvL8AFEBcgEEhxADMuJEgx1bsKBJJo1lx9/gOqPyiIZIN6z4xeSuhf5k+BiP6rbduGsacUPoJNpQwraiwpB3TC9dWxdKicRzefI9XCIbv65agA")
+size_override = Vector2(48, 24)
+
+[sub_resource type="Animation" id="Animation_twyc1"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShipSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RightGunSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LeftGunSprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_gj3y3"]
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RightGunSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftGunSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_w4yt1"]
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShipSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ipr6v"]
+_data = {
+&"Idle": SubResource("Animation_twyc1"),
+&"Shoot": SubResource("Animation_gj3y3"),
+&"Thrust Forward": SubResource("Animation_w4yt1")
+}
+
+[node name="EnemyShip_Spiker" type="RigidBody2D" unique_id=1767108747 groups=["enemies"]]
+gravity_scale = 0.0
+script = ExtResource("1_n0g06")
+
+[node name="ShipSprite" type="Sprite2D" parent="." unique_id=1084480937]
+texture_filter = 1
+material = ExtResource("2_wqcwe")
+position = Vector2(0, 1)
+texture = SubResource("PortableCompressedTexture2D_msovg")
+hframes = 3
+vframes = 2
+frame = 1
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://entities/ships/sh_spiker.aseprite",
+"source_uid": 7089745374210386308
+}
+metadata/_aseprite_wizard_source_file_hash_ = "3044e83298e5e6f92a6a88609fc12830"
+
+[node name="LeftGunSprite" type="Sprite2D" parent="." unique_id=392758347]
+texture_filter = 1
+material = ExtResource("2_wqcwe")
+position = Vector2(9, -1)
+texture = SubResource("PortableCompressedTexture2D_twyc1")
+flip_h = true
+hframes = 2
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://weapons/pw_autocannon.aseprite",
+"source_uid": 5744063627576160602
+}
+metadata/_aseprite_wizard_source_file_hash_ = "a9310c5d640d5a972394fbdf55428a6c"
+
+[node name="RightGunSprite" type="Sprite2D" parent="." unique_id=310226888]
+texture_filter = 1
+material = ExtResource("2_wqcwe")
+position = Vector2(-9, -1)
+texture = SubResource("PortableCompressedTexture2D_w4yt1")
+hframes = 2
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://weapons/pw_autocannon.aseprite",
+"source_uid": 5744063627576160602
+}
+metadata/_aseprite_wizard_source_file_hash_ = "a9310c5d640d5a972394fbdf55428a6c"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1607297968]
+libraries/ = SubResource("AnimationLibrary_ipr6v")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=120643716]
+visible = false
+polygon = PackedVector2Array(-14, 6, -11, 12, 0, 14, 11, 12, 14, 6, 10, -5, 5, -5, 0, -15, -5, -5, -10, -5)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=501951222]
+visible = false
+position = Vector2(4, 2)
+rect = Rect2(-18, -17, 28, 29)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
