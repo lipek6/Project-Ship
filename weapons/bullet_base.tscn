@@ -9,7 +9,7 @@ size = Vector2(2.0000002, 2.0000002)
 [node name="BulletBase" type="Area2D" unique_id=892815630]
 script = ExtResource("1_vn7bk")
 DAMAGE = 200
-SPEED = 2000.0
+SPEED = 200.0
 RECOIL_STRENGTH = 200.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=990615723]

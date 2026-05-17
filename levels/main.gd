@@ -6,8 +6,10 @@ signal apply_recoil(recoil_vector : Vector2)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	randomize()
-	var player_weapon = $Player.left_weapon
-	player_weapon.fired.connect(_on_weapon_fired)
+	var player_weapon_left = $Player.left_weapon
+	var player_weapon_right = $Player.right_weapon
+	player_weapon_left.fired.connect(_on_weapon_fired)
+	player_weapon_right.fired.connect(_on_weapon_fired)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

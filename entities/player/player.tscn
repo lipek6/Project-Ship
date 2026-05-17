@@ -56,6 +56,7 @@ motion_mode = 1
 script = ExtResource("1_b26j0")
 LEFT_WEAPON_SCENE = ExtResource("2_abrql")
 RIGHT_WEAPON_SCENE = ExtResource("2_abrql")
+SPEED = 500.0
 
 [node name="ShipSprite" type="Sprite2D" parent="." unique_id=2098260068]
 texture_filter = 1

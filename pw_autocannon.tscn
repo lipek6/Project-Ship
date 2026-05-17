@@ -47,8 +47,8 @@ _data = {
 
 [node name="pw_Autocannon" unique_id=1242098188 instance=ExtResource("1_41u6l")]
 DAMAGE = 200
-FIRING_RATE = 200.0
-RECOIL_STRENGTH = 200.0
+FIRING_RATE = 800.0
+RECOIL_STRENGTH = 400.0
 BARREL_BULLET_SPEED = 200.0
 BULLET_SCENE = ExtResource("2_7b51i")
 

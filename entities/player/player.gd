@@ -18,11 +18,9 @@ func _ready():
 	left_weapon.position  = Vector2.ZERO
 	right_weapon.position = Vector2.ZERO 
 	
-	right_weapon.get_node("Sprite2D").flip_h = true
-	right_weapon.position.x += 2
+	right_weapon.scale.x = -1
 	$LeftGunMountPoint.add_child(left_weapon)
 	$RightGunMountPoint.add_child(right_weapon)
-
 
 
 
@@ -61,7 +59,7 @@ func _process(delta: float) -> void:
 	if(Input.is_action_pressed("shoot_right_weapon")):
 		right_weapon.shoot(get_global_mouse_position() - right_weapon.get_node("Muzzle").global_position)
 
-	
+
 	# Handles updating position
 	position  += direction * SPEED * delta
 	position.x = clamp(position.x, 0, screen_size.x)
